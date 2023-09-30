@@ -3,6 +3,7 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
+  "homepage": "https://adityamfu.github.io/React-MicroServices/",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
@@ -11,8 +12,10 @@
     "deploy": "gh-pages -d public"
   },
   "dependencies": {
+    "axios": "^1.5.1",
     "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react-dom": "^18.2.0",
+    "react-router-dom": "^6.16.0"
   },
   "devDependencies": {
     "@babel/core": "^7.22.17",

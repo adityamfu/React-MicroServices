@@ -1,0 +1,107 @@
+/* Navbar.css */
+
+/* Gaya untuk Navbar pada mode desktop */
+.navbar {
+  background-color: #333;
+  color: #fff;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  display: flex;
+  justify-content: space-between; /* Membuat tautan navigasi dan logo berada di sisi yang berlawanan */
+  align-items: center;
+}
+
+/* Gaya untuk tautan navigasi pada mode desktop */
+.navbar ul {
+  list-style: none;
+  display: flex;
+}
+
+.navbar li {
+  margin-right: 20px; /* Spasi antara tautan navigasi */
+}
+
+.navbar a {
+  text-decoration: none;
+  color: #fff;
+  transition: color 0.3s ease;
+}
+
+.navbar a:hover {
+  color: #ff4500;
+}
+
+/* Gaya untuk tautan navigasi yang aktif pada mode desktop */
+.navbar .active a {
+  color: #ff4500;
+}
+.navbar .navbar-toggler {
+  display: none;
+  cursor: pointer;
+}
+
+/* Media queries untuk mode responsif */
+@media (max-width: 768px) {
+  /* Semua tautan navigasi di mode responsif disembunyikan */
+  .navbar ul {
+    display: none;
+  }
+
+  /* Tombol toggler (hamburger) ditampilkan di mode responsif */
+  .navbar .navbar-toggler {
+    display: block;
+    cursor: pointer;
+  }
+
+  /* Gaya untuk simbol hamburger */
+  .navbar .navbar-toggler span {
+    display: block;
+    width: 25px;
+    height: 3px;
+    background-color: #fff;
+    margin: 5px 0;
+    transition: background-color 0.3s ease;
+  }
+
+  .navbar .navbar-toggler.active span:nth-child(1) {
+    transform: rotate(-45deg) translate(-3px, 3px);
+  }
+
+  .navbar .navbar-toggler.active span:nth-child(2) {
+    opacity: 0;
+  }
+
+  .navbar .navbar-toggler.active span:nth-child(3) {
+    transform: rotate(45deg) translate(-3px, -3px);
+  }
+
+  /* Tampilkan daftar tautan navigasi saat tombol toggler diklik */
+  .navbar ul.responsive.active {
+    display: flex;
+    flex-direction: column;
+    background-color: #333;
+    position: absolute;
+    top: 60px; /* Tinggi Navbar pada mode desktop */
+    right: 0;
+    width: 100%;
+  }
+
+  .navbar ul.responsive li {
+    margin: 0;
+    text-align: center;
+    padding: 10px 0; /* Spasi antara tautan navigasi */
+    border-bottom: 1px solid #555;
+  }
+
+  .navbar ul.responsive a {
+    color: #fff;
+    text-decoration: none;
+  }
+  .navbar ul.responsive .active a {
+    color: #ff4500;
+    text-decoration: none;
+  }
+}
